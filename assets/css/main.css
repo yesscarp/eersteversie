@@ -1,0 +1,440 @@
+/* assets/css/main.css - VOLLEDIG GECORRIGEERD MET ALLE SLUITENDE ACCOLADES */
+:root {
+  --primary-green: #2d5016;
+  --secondary-green: #4a7c59;
+  --accent-yellow: #f4d03f;
+  --dark-brown: #3e2723;
+  --light-brown: #8d6e63;
+  --water-blue: #1976d2;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --background: #f5f5f5;
+  --card-bg: #ffffff;
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+  --border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* LOGIN PAGE STYLING - FORCEER CONSISTENTE STIJL */
+body.login-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('../images/backgrounds/fishing-bg.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FORCEER ALTIJD DONKERGROENE CONTAINER */
+.login-container {
+  background: rgba(45, 80, 22, 0.95) !important;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  color: white !important;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #f4d03f;
+  background: #f4d03f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-fallback {
+  font-size: 2rem;
+  color: #2d5016;
+  font-weight: bold;
+}
+
+/* FORCEER ALTIJD GELE TITEL */
+.site-title {
+  color: #f4d03f !important;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* FORCEER ALTIJD WITTE SUBTITLE */
+.site-subtitle {
+  color: rgba(255,255,255,0.9) !important;
+  margin-bottom: 30px;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* TAALWISSELAAR STYLING - RECHTSBOVEN */
+.language-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 5px;
+}
+
+.lang-btn {
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.2);
+  color: white !important;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.lang-btn.active,
+.lang-btn:hover {
+  background: #f4d03f !important;
+  color: #2d5016 !important;
+  transform: scale(1.05);
+}
+
+/* 4 TABS LAYOUT - FORCEER JUISTE KLEUREN */
+.auth-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.auth-btn {
+  padding: 12px 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(244, 208, 63, 0.3) !important;
+  color: white !important;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.auth-btn.active {
+  background: #f4d03f !important;
+  color: #2d5016 !important;
+  transform: scale(1.02);
+}
+
+.auth-btn:hover:not(.active) {
+  background: rgba(244, 208, 63, 0.5) !important;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.95) !important;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  color: #333 !important;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  background: white !important;
+  box-shadow: 0 0 0 3px rgba(244, 208, 63, 0.4);
+  transform: translateY(-2px);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #666 !important;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(45deg, #f4d03f, #f1c40f) !important;
+  color: #2d5016 !important;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(244, 208, 63, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(45deg, #f1c40f, #f39c12) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(244, 208, 63, 0.4);
+}
+
+/* Error messages */
+.error-message {
+  background: rgba(255,0,0,0.2);
+  color: #ffcdd2 !important;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 4px solid #ff6b6b;
+  text-align: left;
+  font-size: 14px;
+  box-shadow: 0 2px 10px rgba(255,0,0,0.1);
+}
+
+.success-message {
+  background: rgba(76, 175, 80, 0.2);
+  color: #c8e6c9 !important;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 4px solid #4caf50;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Info content styling */
+.info-content {
+  text-align: left;
+  line-height: 1.6;
+  color: white !important;
+}
+
+.info-content h3 {
+  color: #f4d03f !important;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.info-content ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.info-content li {
+  margin-bottom: 8px;
+  color: rgba(255,255,255,0.9) !important;
+}
+
+.info-content p {
+  color: rgba(255,255,255,0.9) !important;
+  margin-bottom: 15px;
+}
+
+.info-content strong {
+  color: #f4d03f !important;
+}
+
+/* DASHBOARD EN ANDERE PAGINA'S */
+body:not(.login-page) {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background);
+  color: var(--text-dark);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.btn {
+  background: var(--secondary-green);
+  color: var(--text-light);
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn:hover {
+  background: var(--primary-green);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #f4d03f, #f1c40f);
+  color: #2d5016;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+}
+
+/* Registration Success Styling */
+.registration-success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.registration-success {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.success-container {
+  color: #2d5016;
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.success-container h2 {
+  color: #2d5016;
+  margin-bottom: 20px;
+}
+
+.success-container p {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.success-container strong {
+  color: #2d5016;
+  font-size: 1.1rem;
+}
+
+.success-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* PWA Styling */
+@media (display-mode: standalone) {
+  body.login-page {
+    background: url('../images/backgrounds/fishing-bg.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .login-container {
+    animation: fadeIn 0.5s ease-in;
+    backdrop-filter: blur(15px);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .auth-buttons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+  }
+  
+  .auth-btn {
+    font-size: 0.7rem;
+    padding: 10px 5px;
+  }
+  
+  .login-container {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+  
+  .site-title {
+    font-size: 2.2rem;
+  }
+  
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .success-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .auth-btn {
+    font-size: 0.6rem;
+    padding: 8px 4px;
+  }
+}
+

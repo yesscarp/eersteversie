@@ -1,0 +1,362 @@
+/* assets/css/pwa.css - VOLLEDIG GECORRIGEERD MET SLUITENDE ACCOLADES */
+
+/* PWA Install Prompt Styling */
+.pwa-prompt {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    padding: 20px;
+    max-width: 350px;
+    width: 90%;
+    z-index: 10000;
+    transition: all 0.3s ease;
+}
+
+.pwa-prompt.hidden {
+    opacity: 0;
+    transform: translateX(-50%) translateY(100px);
+    pointer-events: none;
+}
+
+.pwa-prompt-content h3 {
+    color: var(--primary-green);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.pwa-prompt-content p {
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.pwa-prompt-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.pwa-prompt-buttons .btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* PWA Splash Screen Styling */
+.pwa-splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10001;
+    color: var(--text-light);
+}
+
+.pwa-splash-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid var(--accent-yellow);
+}
+
+.pwa-splash-title {
+    font-size: 2rem;
+    color: var(--accent-yellow);
+    margin-bottom: 10px;
+}
+
+.pwa-splash-subtitle {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.pwa-loading {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(244, 208, 63, 0.3);
+    border-top: 3px solid var(--accent-yellow);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* PWA Status Bar Styling */
+.pwa-status-bar {
+    height: env(safe-area-inset-top);
+    background: var(--primary-green);
+}
+
+/* PWA Navigation Bar for Mobile */
+.pwa-nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--card-bg);
+    border-top: 1px solid #e0e0e0;
+    padding: env(safe-area-inset-bottom) 0 0 0;
+    display: none;
+    z-index: 1000;
+}
+
+.pwa-nav-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.pwa-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #666;
+    font-size: 0.7rem;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.pwa-nav-item.active {
+    color: var(--primary-green);
+}
+
+.pwa-nav-item i {
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+}
+
+/* PWA Offline Indicator */
+.pwa-offline-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ff5722;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+    z-index: 10000;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+.pwa-offline-indicator.show {
+    transform: translateY(0);
+}
+
+/* PWA Update Available Notification */
+.pwa-update-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--primary-green);
+    color: var(--text-light);
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 10000;
+    max-width: 300px;
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+}
+
+.pwa-update-notification.show {
+    transform: translateX(0);
+}
+
+.pwa-update-notification .update-message {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.pwa-update-notification .update-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.pwa-update-notification .btn {
+    padding: 5px 15px;
+    font-size: 0.8rem;
+}
+
+/* PWA Fullscreen Styles */
+@media (display-mode: standalone) {
+    .pwa-nav-bar {
+        display: block;
+    }
+    
+    body {
+        padding-bottom: 70px;
+    }
+    
+    .header {
+        padding-top: env(safe-area-inset-top);
+    }
+}
+
+/* PWA iOS Safari Specific */
+@supports (-webkit-touch-callout: none) {
+    .pwa-status-bar {
+        background: var(--primary-green);
+        height: env(safe-area-inset-top);
+    }
+}
+
+/* PWA Android Chrome Specific */
+@media (display-mode: standalone) and (orientation: portrait) {
+    .main-content {
+        padding-top: env(safe-area-inset-top);
+    }
+}
+
+/* PWA Loading States */
+.pwa-loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(45, 80, 22, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.pwa-loading-overlay.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.pwa-loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(244, 208, 63, 0.3);
+    border-top: 4px solid var(--accent-yellow);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* PWA Touch Optimizations */
+.pwa-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* PWA Responsive Images */
+.pwa-responsive-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+/* PWA Card Animations */
+.pwa-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pwa-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* PWA Pull to Refresh */
+.pwa-pull-refresh {
+    position: relative;
+    overflow: hidden;
+}
+
+.pwa-pull-indicator {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: var(--primary-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    transition: top 0.3s ease;
+}
+
+.pwa-pull-indicator.active {
+    top: 20px;
+}
+
+/* PWA Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #1a1a1a;
+        --card-bg: #2d2d2d;
+        --text-dark: #ffffff;
+        --shadow: 0 2px 10px rgba(255,255,255,0.1);
+    }
+    
+    .pwa-prompt {
+        background: var(--card-bg);
+        color: var(--text-dark);
+    }
+}
+
+/* PWA Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .pwa-loading,
+    .pwa-loading-spinner {
+        animation: none;
+    }
+    
+    .pwa-card {
+        transition: none;
+    }
+}
+
+/* PWA High Contrast Support */
+@media (prefers-contrast: high) {
+    .btn {
+        border: 2px solid currentColor;
+    }
+    
+    .pwa-nav-item {
+        border: 1px solid transparent;
+    }
+    
+    .pwa-nav-item.active {
+        border-color: currentColor;
+    }
+}
+
+/* PWA Print Styles */
+@media print {
+    .pwa-prompt,
+    .pwa-nav-bar,
+    .pwa-offline-indicator,
+    .pwa-update-notification {
+        display: none !important;
+    }
+}

@@ -1,0 +1,147 @@
+<?php
+$translations = [
+    'site_title' => 'YessCarp - Social Network for Anglers',
+    'welcome_title' => 'Welcome to YessCarp',
+    'welcome_subtitle' => 'The ultimate social network for anglers',
+    'share_catches' => 'Share your catches',
+    'discover_locations' => 'Discover fishing spots',
+    'connect_anglers' => 'Connect with anglers',
+    'weather_info' => 'Weather information',
+    'login' => 'Login',
+    'register' => 'Register',
+    'welcome_back' => 'Welcome back!',
+    'email_address' => 'Email address',
+    'email_placeholder' => 'your@email.com',
+    'password' => 'Password',
+    'password_placeholder' => 'Your password',
+    'full_name' => 'Full name',
+    'name_placeholder' => 'First and last name',
+    'confirm_password' => 'Confirm password',
+    'repeat_password' => 'Repeat your password',
+    'password_min_hint' => 'Minimum 6 characters',
+    'join_yesscarp' => 'Join YessCarp',
+    'create_account' => 'Create account',
+    'login_with_google' => 'Login with Google',
+    'register_with_google' => 'Register with Google',
+    'forgot_password' => 'Forgot password?',
+    'agree_terms_start' => 'I agree to the',
+    'terms_conditions' => 'terms and conditions',
+    'or' => 'or',
+    
+    // Error messages
+    'fill_all_fields' => 'Please fill in all fields',
+    'no_account_found' => 'No account found with this email address',
+    'account_deactivated' => 'Account is deactivated',
+    'wrong_password' => 'Incorrect password',
+    'technical_error' => 'A technical error occurred. Please try again later.',
+    'name_required' => 'Name is required',
+    'email_required' => 'Email is required',
+    'invalid_email' => 'Invalid email address',
+    'password_required' => 'Password is required',
+    'password_min_length' => 'Password must be at least 6 characters',
+    'passwords_not_match' => 'Passwords do not match',
+    'email_exists' => 'An account with this email address already exists',
+    'account_creation_error' => 'An error occurred while creating your account',
+    
+    // Coming soon messages
+    'google_coming_soon' => 'Google Sign-In will be added soon!',
+    'password_reset_coming_soon' => 'Password reset function will be added soon!',
+    'terms_coming_soon' => 'Terms and conditions will be added soon!',
+    'contact' => 'Contact',
+    'info' => 'Info',
+    'your_name' => 'Your name',
+    'your_email' => 'Your email address',
+    'subject' => 'Subject',
+    'your_message' => 'Your message',
+    'send_message' => 'Send message',
+    'contact_success' => 'Thank you for your message! We will contact you as soon as possible.',
+    'contact_error' => 'An error occurred while sending your message.',
+    'about_yesscarp' => 'About YessCarp',
+    'about_description' => 'YessCarp is the largest social network for anglers in the Netherlands. Here you can:',
+    'events_competitions' => 'Attend events and competitions',
+    'pwa_app' => 'PWA App',
+    'pwa_description' => 'YessCarp works like a real app! Add us to your home screen for the best experience.',
+    'contact_description' => 'Questions? Use the contact form or email',
+    'privacy' => 'Privacy',
+    'privacy_description' => 'Your privacy is important to us. We never share your data with third parties.',
+    'email_not_verified' => 'Your email address has not been verified yet. Check your inbox for the verification email.',
+    'email_send_error' => 'Account created, but verification email could not be sent',
+    'registration_success_title' => 'Registration successful!',
+    'verification_email_sent' => 'We have sent a verification email to',
+    'click_verification_link' => 'Click the link in the email to activate your account.',
+    'back_to_login' => 'Back to login',
+
+     // Dashboard
+    'dashboard_title' => 'Dashboard',
+    'dashboard' => 'Dashboard',
+    'home_feed' => 'Home Feed',
+    'my_catches' => 'My Catches',
+    'photo_albums' => 'Photo Albums',
+    
+    // Social
+    'social' => 'Social',
+    'friends' => 'Friends',
+    'groups' => 'Groups',
+    'chat' => 'Chat',
+    'discover' => 'Discover',
+    
+    // Fishing Tools
+    'fishing_tools' => 'Fishing Tools',
+    'fishing_logbook' => 'Fishing Logbook',
+    'weather_info' => 'Weather Info',
+    'fishing_locations' => 'Fishing Locations',
+    'fishing_map' => 'Fishing Map',
+    
+    // Account
+    'account' => 'Account',
+    'my_profile' => 'My Profile',
+    'settings' => 'Settings',
+    'logout' => 'Logout',
+    
+    // Stats
+    'catches' => 'Catches',
+    'locations' => 'Locations',
+    'photos' => 'Photos',
+    
+    // Actions
+    'notifications' => 'Notifications',
+    'search' => 'Search',
+    'add_new' => 'Add New',
+    'new_catch' => 'New Catch',
+    'discover_locations' => 'Discover Locations',
+    'find_friends' => 'Find Friends',
+    'start_chat' => 'Start Chat',
+    'install_app' => 'Install App',
+    
+    // Messages
+    'recent_activity' => 'Recent Activity',
+    'no_activity_yet' => 'No activity yet. Start by sharing your first catch!',
+    'add_first_catch' => 'Add First Catch',
+    'module_not_found' => 'Module not found',
+    'module_coming_soon' => 'The %s module is coming soon!',
+    
+    // User
+    'beginner' => 'Beginner',
+    'social_network_subtitle' => 'Social Network for Anglers',
+    
+    // Groups/Location Chat
+    'location_chat' => 'Location Chat',
+    'chat_live_with_anglers' => 'Chat live with anglers at your favorite locations',
+    'gps_active' => 'GPS Active',
+    'chat_access_within' => 'Chat access within',
+    'all_locations' => 'All Locations',
+    'inaccessible' => 'Accessible',
+    'steenwijk' => 'Steenwijk',
+    'active' => 'Active',
+    'weerribben' => 'Weerribben',
+    'kalenbergergracht' => 'Kalenbergergracht',
+    'steenwijk_kanaal_zuid' => 'Steenwijk Canal South',
+    'members' => 'members',
+    'messages' => 'messages',
+    'chat_locked' => 'CHAT LOCKED',
+    'chat_locked_too_far' => 'Chat locked (too far away)',
+    
+    // Site
+    'site_title' => 'YessCarp - Social Network for Anglers',
+];
+?>
